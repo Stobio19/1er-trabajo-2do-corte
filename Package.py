@@ -12,7 +12,7 @@ class Package:  # Clase madre #Convención, nombre de la clase comienza con may�
             print("\n¡El id está incorrecto, ingrese un id válido!")
             return
 
-        if type(weight) != float:  # Validando el peso
+        if type(weight) != float and type(weight) != int:  # Validando el peso
             print("\n¡El peso está incorrecto, ingrese peso válido!")
             return
 
@@ -23,7 +23,7 @@ class Package:  # Clase madre #Convención, nombre de la clase comienza con may�
         self._oid: int = oid
         self._weight: float = weight
         self._description: str = description
-        self.W_GR_100 = 1.0  # Gramo a 1.0
+        self.W_GR_100 = 1.0  # Gramo a 1.0s
         self._cost: float = self.calculate()  # Costo del envío
 
     # Publico -> accesible para todos
@@ -81,13 +81,6 @@ class Package:  # Clase madre #Convención, nombre de la clase comienza con may�
     def cost(self):  # Shipping value (Valor del envío)
         return self._cost  # get
 
-    @cost.setter
-    def cost(self, new_cost):
-        if new_cost < 0.0:
-            print("\nEl costo no puede ser menor que cero!!")
-        else:
-            self.cost = new_cost
-
     # Métodos
 
     # Calculate # Abstract Method
@@ -105,7 +98,7 @@ class Package:  # Clase madre #Convención, nombre de la clase comienza con may�
 # Instanciar un objeto de la clase
 # Creación de un objeto
 person = Package(12, 67.5, 'Hola, soy samuel', 700.000, 80)
-x = Package("lambda")
+x = Package()
 # print(person._oid)
 # Accediendo a la información del método getInfo()
 # person.set_oid(-1)  # Modifying the atribute id

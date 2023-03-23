@@ -21,7 +21,7 @@ class StandardPackage(Package):  # class inherits from Package class
         return info+f"""\nCuota fija: {self.cuota_fija}\ncosto:{self.calculate() } """   # info + los nuevos atributos de la subclase
 
 
-StandardPackageexample = StandardPackage(13, 68.5, 'xdxd', 800.000)
+StandardPackageexample = StandardPackage(13, 68.3)
 # print(StandardPackageexample)
 # print(StandardPackageexample.getInfo())
 print(StandardPackageexample.getInfo())
