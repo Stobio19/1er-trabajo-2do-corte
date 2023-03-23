@@ -7,7 +7,7 @@ class Package:  # Clase madre #Convención, nombre de la clase comienza con may�
     # Constructor
     # Self: variable de instancia
     @abstractmethod
-    def __init__(self, oid: int = 0, weight: float = 0.0, description: str = '', cost: float = 0.0, W_GR_100: float = 0.0):  # New Object
+    def __init__(self, oid: int = 0, weight: float = 0.0, description: str = " "):  # New Object
         if type(oid) != int:  # Validando el id
             print("\n¡El id está incorrecto, ingrese un id válido!")
             return
@@ -97,17 +97,9 @@ class Package:  # Clase madre #Convención, nombre de la clase comienza con may�
 
 # Instanciar un objeto de la clase
 # Creación de un objeto
-person = Package(12, 67.5, 'Hola, soy samuel', 700.000, 80)
+person = Package(12, 67.5, "Hola soy samuel")
 x = Package()
-# print(person._oid)
-# Accediendo a la información del método getInfo()
-# person.set_oid(-1)  # Modifying the atribute id
-# print(person.getInfo())
-# print(person.get_oid())
-# print(person.cost)
-# person.weight = 600
-
 
 # Class “StandardPackage”
 
-# print(person.getInfo())
+print(person.getInfo())

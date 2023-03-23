@@ -11,7 +11,7 @@ class StandardPackage(Package):  # class inherits from Package class
 
     # Methods
 
-    @abstractmethod
+    @abstractmethod  # Heredated method
     def calculate(self) -> float:  # Function to return shipping value
         return (self.weight * self.W_GR_100 * 1000) + self.cuota_fija
 
